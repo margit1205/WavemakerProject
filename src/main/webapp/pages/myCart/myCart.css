@@ -1,0 +1,11 @@
+.app-select{
+     width: 25px !important;
+ }
+ .app-select-wrapper::before{
+     top:78% !important;
+     left: 25px !important;
+     
+ }
+  .app-livelist .app-list-item:hover{
+      background:#fff !important;
+  }

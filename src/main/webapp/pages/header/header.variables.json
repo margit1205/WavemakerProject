@@ -1,0 +1,303 @@
+{
+  "CountCartItem" : {
+    "_id" : "wm-CountCartItem-wm.ServiceVariable-1683177582454",
+    "name" : "CountCartItem",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "userid",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    } ],
+    "type" : "com.e_commerce_web_app.shopingapp.models.query.CartItemCountResponse",
+    "service" : "shopingapp",
+    "operation" : "executeCartItemCount",
+    "operationId" : "QueryExecutionController_executeCartItemCount",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "createUser" : {
+    "_id" : "wm-createUser-wm.LiveVariable-1682328493217",
+    "name" : "createUser",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "Userinfo",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "transformationRequired" : false,
+    "liveSource" : "shopingapp",
+    "ignoreCase" : true,
+    "matchMode" : "startignorecase",
+    "orderBy" : "id asc",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "id",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "id",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "username",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "username",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 100,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "email",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "email",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 100,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "password",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "password",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 100,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "phone",
+        "type" : "long",
+        "fullyQualifiedType" : "long",
+        "columnName" : "phone",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "role",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "role",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "image",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "image",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "gender",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "gender",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "fullName",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "full_name",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      } ],
+      "entityName" : "Userinfo",
+      "fullyQualifiedName" : "com.e_commerce_web_app.shopingapp.Userinfo",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 1,
+    "tableName" : "userinfo",
+    "tableType" : "TABLE",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterExpressions" : { },
+    "package" : "com.e_commerce_web_app.shopingapp.Userinfo"
+  },
+  "getCateogry" : {
+    "_id" : "wm-getCateogry-wm.LiveVariable-1682278382304",
+    "name" : "getCateogry",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "Cateogry",
+    "isList" : false,
+    "saveInPhonegap" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "transformationRequired" : false,
+    "liveSource" : "shopingapp",
+    "ignoreCase" : true,
+    "matchMode" : "startignorecase",
+    "orderBy" : "id asc",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "id",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "id",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "cname",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "c_name",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 100,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      } ],
+      "entityName" : "Cateogry",
+      "fullyQualifiedName" : "com.e_commerce_web_app.shopingapp.Cateogry",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "bindCount" : 1,
+    "tableName" : "cateogry",
+    "tableType" : "TABLE",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterFields" : { },
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ {
+        "target" : "",
+        "type" : "string",
+        "matchMode" : "exact",
+        "value" : "",
+        "required" : false,
+        "secondvalue" : ""
+      } ]
+    },
+    "package" : "com.e_commerce_web_app.shopingapp.Cateogry"
+  },
+  "mobilePage" : {
+    "_id" : "wm-mobilePage-wm.NavigationVariable-1682599045572",
+    "name" : "mobilePage",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Mobile",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navLaptopPage" : {
+    "_id" : "wm-navLaptopPage-wm.NavigationVariable-1682337640280",
+    "name" : "navLaptopPage",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "Laptop",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "stvCategoryNav" : {
+    "_id" : "wm-stvCateogryNav-wm.Variable-1683092976077",
+    "name" : "stvCategoryNav",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "label" : "All Products",
+      "Link" : "#allProduct"
+    }, {
+      "label" : "Mobile",
+      "Link" : "#Mobile"
+    }, {
+      "label" : "Laptop",
+      "Link" : "#Laptop"
+    }, {
+      "label" : "Accessories",
+      "Link" : "#Accessories"
+    }, {
+      "label" : "Cloths",
+      "Link" : "#Cloths"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  }
+}

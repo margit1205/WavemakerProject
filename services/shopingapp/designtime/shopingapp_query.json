@@ -1,0 +1,303 @@
+{
+  "AddToCart" : {
+    "name" : "AddToCart",
+    "description" : "add item to cartitem query",
+    "version" : "V2",
+    "queryString" : "insert into cartitem values(:id,:cartid,:productId,:quantity)",
+    "countQueryString" : null,
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : false,
+    "type" : "INSERT",
+    "parameters" : [ {
+      "name" : "id",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false
+    }, {
+      "name" : "cartid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : true
+    }, {
+      "name" : "productId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2",
+      "required" : true
+    }, {
+      "name" : "quantity",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.e_commerce_web_app.shopingapp.models.query.AddToCartRequest",
+      "method" : "POST"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  },
+  "CartIdFromUserid" : {
+    "name" : "CartIdFromUserid",
+    "description" : "select cartid from userid",
+    "version" : "V2",
+    "queryString" : "select id from cart where user_id=:loginuserid",
+    "countQueryString" : "select count(*) from (select id from cart where user_id=:loginuserid) wmTempTable",
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "loginuserid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.e_commerce_web_app.shopingapp.models.query.CartIdFromUseridResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "id",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "CartItemCount" : {
+    "name" : "CartItemCount",
+    "description" : "counting no item in cart of login user",
+    "version" : "V2",
+    "queryString" : "select count(PRODUCT_ID) from cartitem CARTITEM, cart MYCART where CARTITEM.cart_id=MYCART.id and MYCART.USER_ID=:userid",
+    "countQueryString" : "select count(*) from (select count(PRODUCT_ID) from cartitem CARTITEM, cart MYCART where CARTITEM.cart_id=MYCART.id and MYCART.USER_ID=:userid) wmTempTable",
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "userid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.e_commerce_web_app.shopingapp.models.query.CartItemCountResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "count(PRODUCT_ID)",
+        "fieldName" : "count_productId_",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "RemoveProduct" : {
+    "name" : "RemoveProduct",
+    "description" : "delete Product from cart list",
+    "version" : "V2",
+    "queryString" : "DELETE FROM cartitem WHERE id=:itemid",
+    "countQueryString" : null,
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : false,
+    "type" : "DELETE",
+    "parameters" : [ {
+      "name" : "itemid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "DELETE"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  },
+  "getProductById" : {
+    "name" : "getProductById",
+    "description" : "using for selecting products",
+    "version" : "V2",
+    "queryString" : "select * from product where id=:proudctid",
+    "countQueryString" : "select count(*) from (select * from product where id=:proudctid) wmTempTable",
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "proudctid",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "20",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.e_commerce_web_app.shopingapp.models.query.GetProductByIdResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "id",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      }, {
+        "name" : "p_name",
+        "fieldName" : "pname",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "description",
+        "fieldName" : "description",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "price",
+        "fieldName" : "price",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "image_url",
+        "fieldName" : "imageUrl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "cateogry_id",
+        "fieldName" : "cateogryId",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Long",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "updateOrder" : {
+    "name" : "updateOrder",
+    "description" : "update order",
+    "version" : "V2",
+    "queryString" : "update orderlist set status=:order_status where id=:orderid and user_id=:userid",
+    "countQueryString" : null,
+    "offlineQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : false,
+    "type" : "UPDATE",
+    "parameters" : [ {
+      "name" : "order_status",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "cancelled",
+      "required" : false
+    }, {
+      "name" : "orderid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4",
+      "required" : false
+    }, {
+      "name" : "userid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "4",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.e_commerce_web_app.shopingapp.models.query.UpdateOrderRequest",
+      "method" : "PUT"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  }
+}

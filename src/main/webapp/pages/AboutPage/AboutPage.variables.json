@@ -1,0 +1,32 @@
+{
+  "companyLocation" : {
+    "_id" : "wm-companyLocation-wm.ServiceVariable-1684396733793",
+    "name" : "companyLocation",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "query",
+      "value" : "Hyderabad",
+      "type" : "string"
+    }, {
+      "target" : "key",
+      "value" : "41c770f72d20472789e363a84d5e50f5",
+      "type" : "string"
+    } ],
+    "type" : "opencagedata.RootResponse",
+    "service" : "opencagedata",
+    "operation" : "invoke",
+    "operationId" : "opencagedata_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id" : "opencagedata",
+  "type" : "RestService",
+  "title" : "opencagedata",
+  "mockEnabled" : false
+}

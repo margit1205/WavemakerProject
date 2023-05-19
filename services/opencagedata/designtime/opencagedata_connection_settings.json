@@ -1,0 +1,32 @@
+{
+  "endpointAddress" : "https://api.opencagedata.com/geocode/v1/json",
+  "method" : "GET",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "query" : "Hyderabad",
+    "key" : "41c770f72d20472789e363a84d5e50f5"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "date" : [ "Thu, 18 May 2023 08:11:35 GMT" ],
+      "server" : [ "Apache" ],
+      "access-control-allow-origin" : [ "*" ],
+      "x-ratelimit-limit" : [ "2500" ],
+      "x-ratelimit-remaining" : [ "2499" ],
+      "x-ratelimit-reset" : [ "1684454400" ],
+      "vary" : [ "Accept-Encoding" ],
+      "x-frame-options" : [ "DENY" ],
+      "x-xss-protection" : [ "1; mode=block" ],
+      "content-type" : [ "application/json; charset=utf-8" ],
+      "strict-transport-security" : [ "max-age=31536000; includeSubDomains; preload" ]
+    },
+    "responseBody" : "{\"documentation\":\"https://opencagedata.com/api\",\"licenses\":[{\"name\":\"see attribution guide\",\"url\":\"https://opencagedata.com/credits\"}],\"rate\":{\"limit\":2500,\"remaining\":2499,\"reset\":1684454400},\"results\":[{\"annotations\":{\"DMS\":{\"lat\":\"17° 21' 38.12040'' N\",\"lng\":\"78° 28' 26.62068'' E\"},\"MGRS\":\"44QKE3157821212\",\"Maidenhead\":\"MK97fi66vm\",\"Mercator\":{\"x\":8735692.544,\"y\":1950097.58},\"OSM\":{\"edit_url\":\"https://www.openstreetmap.org/edit?relation=7868535#map=17/17.36059/78.47406\",\"note_url\":\"https://www.openstreetmap.org/note/new#map=17/17.36059/78.47406&layers=N\",\"url\":\"https://www.openstreetmap.org/?mlat=17.36059&mlon=78.47406#map=17/17.36059/78.47406\"},\"UN_M49\":{\"regions\":{\"ASIA\":\"142\",\"IN\":\"356\",\"SOUTHERN_ASIA\":\"034\",\"WORLD\":\"001\",\"PK\":\"586\",\"SG\":\"702\",\"SOUTHEAST_ASIA\":\"035\",\"MY\":\"458\"},\"statistical_groupings\":[\"LEDC\",\"LEDC\",\"LEDC\",\"LEDC\",\"LEDC\",\"LEDC\",\"LEDC\",\"LEDC\",\"LEDC\",\"SIDS\",\"LEDC\"]},\"callingcode\":91,\"currency\":{\"alternate_symbols\":[\"Rs\",\"৳\",\"૱\",\"௹\",\"रु\",\"₨\",\"Rs\",\"Rs\",\"৳\",\"૱\",\"௹\",\"रु\",\"₨\",\"Rs\",\"৳\",\"૱\",\"௹\",\"रु\",\"₨\",\"Rs\",\"৳\",\"૱\",\"௹\",\"रु\",\"₨\",\"Rs\",\"Rs\",\"Rs\",\"৳\",\"૱\",\"௹\",\"रु\",\"₨\",\"S$\"],\"decimal_mark\":\".\",\"html_entity\":\"&#x20b9;\",\"iso_code\":\"INR\",\"iso_numeric\":\"356\",\"name\":\"Indian Rupee\",\"smallest_denomination\":50,\"subunit\":\"Paisa\",\"subunit_to_unit\":100,\"symbol\":\"₹\",\"symbol_first\":1,\"thousands_separator\":\",\",\"disambiguate_symbol\":\"PKR\"},\"flag\":\"\uD83C\uDDEE\uD83C\uDDF3\",\"geohash\":\"tepfc8rhf0m5nnugqnhx\",\"qibla\":282.76,\"roadinfo\":{\"drive_on\":\"left\",\"speed_in\":\"km/h\",\"road\":\"Station Road\"},\"sun\":{\"rise\":{\"apparent\":1684368900,\"astronomical\":1684450560,\"civil\":1684453860,\"nautical\":1684452240},\"set\":{\"apparent\":1684415460,\"astronomical\":1684420140,\"civil\":1684416840,\"nautical\":1684418460}},\"timezone\":{\"name\":\"Asia/Kolkata\",\"now_in_dst\":0,\"offset_sec\":19800,\"offset_string\":\"+0530\",\"short_name\":\"IST\"},\"what3words\":{\"words\":\"player.hack.advancing\"},\"wikidata\":\"Q1361\"},\"bounds\":{\"northeast\":{\"lat\":17.5608321,\"lng\":78.6223912},\"southwest\":{\"lat\":17.2916377,\"lng\":78.2387067}},\"components\":{\"ISO_3166-1_alpha-2\":\"IN\",\"ISO_3166-1_alpha-3\":\"IND\",\"ISO_3166-2\":[\"IN-TG\",\"PK-SD\",\"IN-TG\",\"IN-TG\",\"IN-TG\",\"PK-PB\",\"PK-SD\",\"IN-TG\",\"SG-01\",\"MY-14\"],\"_category\":\"place\",\"_type\":\"city\",\"city\":\"Hyderabad\",\"continent\":\"Asia\",\"country\":\"India\",\"country_code\":\"in\",\"county\":\"Bahadurpura mandal\",\"state\":\"Telangana\",\"state_code\":\"TG\",\"state_district\":\"Hyderabad\",\"postcode\":\"91000\",\"village\":\"Hyderabad\",\"city_district\":\"Greater Hyderabad Municipal Corporation South Zone\",\"suburb\":\"Katedan\",\"water\":\"Hyderabad\",\"residential\":\"Hyderabad\",\"subdistrict\":\"Mian Channu Tehsil\",\"neighbourhood\":\"Gaddi Colony\",\"railway\":\"Hyderabad\",\"road\":\"Station Road\",\"shop\":\"Hyderabad\",\"building\":\"Hyderabad\",\"house_number\":\"14\",\"quarter\":\"Chow Kit\",\"restaurant\":\"Hyderabad\"},\"confidence\":3,\"formatted\":\"Hyderabad, Bahadurpura mandal, India\",\"geometry\":{\"lat\":17.360589,\"lng\":78.4740613}}],\"status\":{\"code\":200,\"message\":\"OK\"},\"stay_informed\":{\"blog\":\"https://blog.opencagedata.com\",\"mastodon\":\"https://en.osm.town/@opencage\",\"twitter\":\"https://twitter.com/OpenCage\"},\"thanks\":\"For using an OpenCage API\",\"timestamp\":{\"created_http\":\"Thu, 18 May 2023 08:11:35 GMT\",\"created_unix\":1684397495},\"total_results\":10}",
+    "convertedResponse" : null
+  }
+}

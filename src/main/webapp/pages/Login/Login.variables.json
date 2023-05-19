@@ -1,0 +1,251 @@
+{
+  "createUser" : {
+    "_id" : "wm-createUser-wm.ServiceVariable-1683625321271",
+    "name" : "createUser",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.e_commerce_web_app.shopingapp.Userinfo",
+    "service" : "shopingapp",
+    "operation" : "createUserinfo",
+    "operationId" : "UserinfoController_createUserinfo",
+    "operationType" : "post",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Userinfo"
+  },
+  "FileServiceUploadFile" : {
+    "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1684315779235",
+    "name" : "FileServiceUploadFile",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "files",
+      "value" : "bind:Widgets.fileupload1.selectedFiles",
+      "type" : "java.lang.String"
+    } ],
+    "type" : "com.e_commerce_web_app.fileservice.FileService.FileUploadResponse",
+    "service" : "FileService",
+    "operation" : "uploadFile",
+    "operationId" : "FileController_uploadFile",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "File"
+  },
+  "registerAction" : {
+    "_id" : "wm-registerAction-wm.NotificationVariable-1683624835270",
+    "name" : "registerAction",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "You are sucessfully Registered",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "4000",
+      "type" : "number"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "top center",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
+  "registerForm" : {
+    "_id" : "wm-registerForm-wm.LiveVariable-1683114603750",
+    "name" : "registerForm",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:Widgets.UserinfoLiveForm1.dataoutput.id",
+      "type" : "number"
+    }, {
+      "target" : "username",
+      "value" : "bind:Widgets.UserinfoLiveForm1.dataoutput.username",
+      "type" : "string"
+    }, {
+      "target" : "email",
+      "value" : "bind:Widgets.UserinfoLiveForm1.dataoutput.email",
+      "type" : "string"
+    }, {
+      "target" : "password",
+      "value" : "bind:Widgets.UserinfoLiveForm1.dataoutput.password",
+      "type" : "string"
+    }, {
+      "target" : "phone",
+      "value" : "bind:Widgets.UserinfoLiveForm1.dataoutput.phone",
+      "type" : "number"
+    }, {
+      "target" : "role",
+      "value" : "bind:Widgets.UserinfoLiveForm1.dataoutput.role",
+      "type" : "string"
+    } ],
+    "operation" : "insert",
+    "dataSet" : [ ],
+    "type" : "Userinfo",
+    "isList" : false,
+    "saveInPhonegap" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "transformationRequired" : false,
+    "liveSource" : "shopingapp",
+    "ignoreCase" : true,
+    "matchMode" : "startignorecase",
+    "orderBy" : "id asc",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "id",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "id",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "username",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "username",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 100,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "email",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "email",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 100,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "password",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "password",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 100,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "phone",
+        "type" : "long",
+        "fullyQualifiedType" : "long",
+        "columnName" : "phone",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 19,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "role",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "role",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "image",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "image",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "gender",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "gender",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "fullName",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "full_name",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      } ],
+      "entityName" : "Userinfo",
+      "fullyQualifiedName" : "com.e_commerce_web_app.shopingapp.Userinfo",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "tableName" : "userinfo",
+    "tableType" : "TABLE",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterFields" : { },
+    "filterExpressions" : { },
+    "inputFields" : { },
+    "package" : "com.e_commerce_web_app.shopingapp.Userinfo"
+  }
+}

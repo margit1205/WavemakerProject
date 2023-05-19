@@ -1,0 +1,62 @@
+<wm-page pagetitle="About Page" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-container class="bookimg-div" name="container1">
+                <wm-container horizontalalign="center" class="text-book" name="container2">
+                    <wm-label padding="unset 0.5em" class="h3" caption="#let's_talk" fontweight="bold" fontsize="30" color="#fff" name="label1"></wm-label>
+                    <wm-label padding="unset 0.5em" class="h5" caption="LEAVE A MESSAGE ,We love to hear from you" color="#fff" name="label2"></wm-label>
+                </wm-container>
+                <wm-picture resizemode="cover" picturesource="resources/images/imagelists/banner.png" width="100%" height="250px" class="book-img" name="picture1"></wm-picture>
+            </wm-container>
+            <wm-layoutgrid name="layoutgrid1" class="my-layout">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                        <wm-container name="container3">
+                            <wm-label padding="unset 0.5em" name="label3" class="h4" caption="GET IN TOUCH"></wm-label>
+                            <wm-label padding="unset 0.5em" class="h4" name="label4" caption="Visit one of our agency location or Contact us today" fontweight="bold"></wm-label>
+                            <wm-label padding="unset 0.5em" class="h4" name="label6" caption="Head Office" fontweight="bold"></wm-label>
+                            <wm-container name="container4">
+                                <wm-layoutgrid name="layoutgrid2">
+                                    <wm-gridrow padding="10px unset" name="gridrow2">
+                                        <wm-gridcolumn columnwidth="5" name="gridcolumn3">
+                                            <wm-label padding="unset 0.5em" caption="Address" fontsize="14" name="label6_1"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="7" name="gridcolumn4">
+                                            <wm-label padding="unset 0.5em" class="text-muted" caption="Hyderabad Floor 5, N Heights, Software Units Layout, Madhapur, Hyderabad, TS 500081." name="label7"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                                <wm-layoutgrid name="layoutgrid3">
+                                    <wm-gridrow padding="10px unset" name="gridrow3">
+                                        <wm-gridcolumn columnwidth="5" name="gridcolumn5">
+                                            <wm-label padding="unset 0.5em" caption="Phone" fontsize="14" name="label8"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="7" name="gridcolumn6">
+                                            <wm-label padding="unset 0.5em" class="text-muted" caption="040 3355 2000" name="label9"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                                <wm-layoutgrid name="layoutgrid4">
+                                    <wm-gridrow padding="10px unset" name="gridrow4">
+                                        <wm-gridcolumn columnwidth="5" name="gridcolumn7">
+                                            <wm-label padding="unset 0.5em" caption="Working Hours" fontsize="14" name="label10"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="7" name="gridcolumn8">
+                                            <wm-label padding="unset 0.5em" class="text-muted" caption="10:00  - 18:00 ( Mon-Fri )" name="label11"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-container>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2" horizontalalign="center">
+                        <wm-picture resizemode="cover" name="picture2" picturesource="resources/images/imagelists/Screenshot_2023-05-18_120209.png" height="400px" width="400px" show="false"></wm-picture>
+                        <wm-prefab prefabname="googlemaps" name="googlemaps2" locations="bind:Variables.companyLocation.dataSet.results" lat="geometry.lat" lng="geometry.lng" markertype="LatLng"></wm-prefab>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

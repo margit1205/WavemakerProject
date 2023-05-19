@@ -1,0 +1,33 @@
+<wm-page pagetitle="Contact Page" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.ShopingappCreateContact.dataSet" captionalign="left" name="createContactForm1">
+                <wm-layoutgrid columns="1" name="layoutgrid1">
+                    <wm-gridrow name="gridrow2">
+                        <wm-composite name="composite1">
+                            <wm-label class="h4 control-label" caption="LEAVE A MESSAGE" name="label1" fontweight="bold"></wm-label>
+                        </wm-composite>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                            <wm-form-field name="Contact_name" readonly="false" displayname="Your Name" key="Contact.name" type="string" show="true" widget="text" inputtype="text" placeholder="Enter your name"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn2">
+                            <wm-form-field name="Contact_email" readonly="false" displayname="Email" key="Contact.email" type="string" show="true" widget="text" inputtype="text" placeholder="Enter your email" defaultvalue="bind:Variables.getUserInfo.firstRecord.email"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                            <wm-form-field name="Contact_message" readonly="false" displayname="Message" key="Contact.message" type="string" show="true" widget="text" inputtype="text" placeholder="Write your message"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-action key="save" display-name="Submit" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+            </wm-form>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

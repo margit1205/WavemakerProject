@@ -1,0 +1,77 @@
+<wm-page pagetitle="Myorders" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn1">
+                        <wm-container name="container1"></wm-container>
+                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" statehandler="URL" name="OrderlistList1"
+                            dataset="bind:Variables.getOrders.dataSet" navigation="Basic" selectfirstitem="true" orderby="id:desc">
+                            <wm-listtemplate layout="inline" name="listtemplate1">
+                                <wm-container class="media-body" name="container3">
+                                    <wm-layoutgrid name="layoutgrid3">
+                                        <wm-gridrow name="gridrow5">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn9">
+                                                <wm-label padding="unset 0.5em" class="h6" caption="ORDER ID" name="label7" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn10">
+                                                <wm-label padding="unset 0.5em" name="label4" class="h4" caption="bind:Variables.getOrders.dataSet[$i].id"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow6">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn11">
+                                                <wm-label padding="unset 0.5em" class="h6" caption="ORDER DATE" name="label8" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn12">
+                                                <wm-label padding="unset 0.5em" name="label5" class="h4" caption="bind:Variables.getOrders.dataSet[$i].orderDate"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow7">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn13">
+                                                <wm-label padding="unset 0.5em" class="h6" caption="ORDER STATUS" name="label10" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn14">
+                                                <wm-label padding="unset 0.5em" name="label6" class="h5" caption="bind:Variables.getOrders.dataSet[$i].status"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-container>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="9" name="gridcolumn2" padding="unset 20px 20px 20px">
+                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Media List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" statehandler="URL" name="OrderItemList1" dataset="bind:Variables.getOrderItem.dataSet"
+                            navigation="Basic" show="true">
+                            <wm-listtemplate layout="media" name="listtemplate2">
+                                <wm-container class="media-left media-top" name="container3_1">
+                                    <wm-picture name="Picture" class="media-object" width="32pt" height="32pt" picturesource="bind:Variables.getOrderItem.dataSet[$i].product.imageUrl"></wm-picture>
+                                </wm-container>
+                                <wm-container class="media-body" padding="unset 1.5em unset 1.25em" name="container4">
+                                    <wm-label class="pull-left" caption="bind:Variables.getOrderItem.dataSet[$i].product.pname" name="Name" margin="0em unset 0.5em unset" fontsize="1.143" fontunit="em"></wm-label>
+                                    <wm-label name="Time" class="pull-right text-muted" caption="bind:&quot;Rs.&quot;+Variables.getOrderItem.dataSet[$i].product.price"></wm-label>
+                                </wm-container>
+                            </wm-listtemplate>
+                        </wm-list>
+                        <wm-container name="container6" horizontalalign="right" padding="20px unset">
+                            <wm-label padding="unset 0.5em" name="label9" margin="unset 20px unset unset" caption="TOTAL"></wm-label>
+                            <wm-label padding="unset 0.5em" margin="unset 20px unset unset" name="label10_1" caption="bind:Widgets.OrderlistList1.selecteditem.totalAmount"></wm-label>
+                            <wm-container name="container6_1" padding="20px unset" margin="20px unset">
+                                <wm-button class="btn-default btn-info" caption="Print Order Details" type="button" margin="unset 0.5em" name="button3" iconclass="fa fa-print" show="false"></wm-button>
+                                <wm-button class="btn-default btn-danger" caption="Cancel Orer" type="button" margin="unset 0.5em" name="button1" on-click="Actions.ActionconfirmCancel.invoke()" disabled="bind:Widgets.OrderlistList1.selecteditem.status==&quot;Cancelled&quot;"></wm-button>
+                            </wm-container>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4" horizontalalign="right"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-confirmdialog on-ok="notification.onOk()" on-cancel="notification.onCancel()" name="notificationconfirmdialog" notificationdialog="confirm" message="bind:notification.text" title="bind:notification.title" oktext="bind:notification.okButtonText"
+        canceltext="bind:notification.cancelButtonText" on-close="notification.onClose()"></wm-confirmdialog>
+</wm-page>

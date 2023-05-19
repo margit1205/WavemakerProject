@@ -1,0 +1,15 @@
+<wm-partial name="partial1">
+    <wm-table statehandler="URL" name="UserinfoTable1" title="" dataset="bind:Variables.ShopingappUserinfoData.dataSet" navigation="Basic">
+        <wm-table-column binding="id" caption="Id" primary-key="true" edit-widget-type="number" type="integer" generator="identity" readonly="true" show="true"></wm-table-column>
+        <wm-table-column binding="fullName" caption="Full Name" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+        <wm-table-column binding="username" caption="Username" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+        <wm-table-column binding="gender" caption="Gender" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+        <wm-table-column binding="email" caption="Email" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+        <wm-table-column binding="phone" caption="Phone" edit-widget-type="number" type="long" generator="assigned" show="true" readonly="false"></wm-table-column>
+        <wm-table-column binding="password" caption="Password" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+        <wm-table-column binding="role" caption="Role" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+        <wm-table-column binding="image" caption="Image" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+        <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow($event)"></wm-table-row-action>
+        <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action>
+    </wm-table>
+</wm-partial>

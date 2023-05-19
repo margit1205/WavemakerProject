@@ -1,0 +1,21 @@
+<wm-partial name="partial1">
+    <wm-panel iconclass="" autoclose="outsideClick" title="" name="panel1">
+        <wm-table editmode="inline" statehandler="URL" name="ProductTable1" title="" dataset="bind:Variables.ShopingappProductData.dataSet" navigation="Basic">
+            <wm-table-column binding="id" caption="Id" textalignment="center" primary-key="true" edit-widget-type="number" type="integer" generator="identity" readonly="true" show="true"></wm-table-column>
+            <wm-table-column binding="pname" caption="PRODUCT NAME" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+            <wm-table-column binding="description" caption="Description" edit-widget-type="text" type="text" generator="assigned" show="true" readonly="false"></wm-table-column>
+            <wm-table-column binding="price" caption="Price" textalignment="center" edit-widget-type="number" type="integer" generator="assigned" show="true" readonly="false"></wm-table-column>
+            <wm-table-column binding="imageUrl" caption="Image Url" widget-type="image" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false">
+                <wm-picture picturesource="bind:row.getProperty('imageUrl')" hint="bind:row.getProperty('imageUrl')" class="ProductImage" conditionalclass="" conditionalstyle=""></wm-picture>
+            </wm-table-column>
+            <wm-table-column binding="cateogry.id" caption="Cateogry Id" textalignment="center" primary-key="true" edit-widget-type="select" related-entity-name="Cateogry" type="integer" generator="identity" datafield="id" displayfield="id" show="true"
+                filterexpressions="{&quot;condition&quot;:&quot;AND&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;&quot;,&quot;type&quot;:&quot;string&quot;,&quot;matchMode&quot;:&quot;anywhereignorecase&quot;,&quot;value&quot;:&quot;&quot;,&quot;required&quot;:false}]}"
+                readonly="false"></wm-table-column>
+            <wm-table-column binding="cateogry.cname" caption="Cateogry Cname" textalignment="center" edit-widget-type="text" related-entity-name="Cateogry" type="string" generator="assigned" readonly="true" show="true"></wm-table-column>
+            <wm-table-column binding="rowOperations" caption="Actions" width="120px" edit-widget-type="text" type="custom" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column>
+            <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false" widget-type="button"></wm-table-action>
+            <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false" widget-type="button"></wm-table-row-action>
+            <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false" widget-type="button"></wm-table-row-action>
+        </wm-table>
+    </wm-panel>
+</wm-partial>

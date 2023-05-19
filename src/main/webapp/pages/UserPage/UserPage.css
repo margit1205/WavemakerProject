@@ -1,0 +1,48 @@
+.center-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mail-div{
+  background: #0082f9;
+    border-radius: 50%;
+    padding: 10px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+    
+
+.mail-icon{
+    font-weight: 800;
+}
+.myemail-div{
+    border-bottom: 0.5px solid rgba(0,0,0,.2);
+    /*background: #FBFBFB;*/
+}
+.addmail{
+    justify-content: center;
+    align-items: center;
+}
+.add-label{
+    cursor: pointer !important;
+}
+.myicon{
+    cursor: pointer;
+}
+
+.camera{
+   position:absolute;
+   left: 35px;
+   top: 4px;
+   background: #000;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-left: 5px;
+   z-index: 1;
+   
+   
+}

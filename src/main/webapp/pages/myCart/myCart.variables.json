@@ -1,0 +1,29 @@
+{
+  "RemoveItem" : {
+    "_id" : "wm-RemoveItem-wm.ServiceVariable-1683183076886",
+    "name" : "RemoveItem",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "itemid",
+      "value" : "bind:Widgets.CartitemList1.selecteditem.id",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.commons.wrapper.IntegerWrapper",
+    "service" : "shopingapp",
+    "operation" : "executeRemoveProduct",
+    "operationId" : "QueryExecutionController_executeRemoveProduct",
+    "operationType" : "delete",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Actions.goToPage_myCart.invoke();Variables.getCartitem.listRecords()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

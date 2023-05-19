@@ -1,0 +1,62 @@
+/*.main-description{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*}*/
+
+.h2{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.carousel-indicators .active{
+  background: orange !important;  
+}
+ .carousel-control .icon-prev:before {
+    content: '\2039';
+    font-size: 32px;
+   
+}
+ .carousel-control .icon-next:before {
+    content: '\203a';
+    font-size: 32px;
+}
+.banner-img{
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+}
+.banner-text{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left:10px;
+}
+.learn-more:hover{
+    text-decoration: none;
+    color: black!important;
+    background: #d2dbff !important;
+   
+}
+.card{
+    cursor: pointer ;
+}
+.app-livelist.list-card .app-list-item .app-card.card{
+    height: 400px !important;
+    width: 280px !important;
+}
+/*.app-livelist.list-card .app-list-item .app-card.card:hover{*/
+/*    scale: 1.05;*/
+/*}*/
+.app-card.card .app-card-image {
+    background-color: #fff;
+}
+.app-card.card .app-card-image img {
+    height: 100%;
+    width: 150px;
+    object-fit: contain !important;
+    margin-top: 20px;
+}
+.app-card.card .app-card-image img:hover{
+    scale: 1.2;
+}

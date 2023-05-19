@@ -1,0 +1,14 @@
+/*.nav > li:last-child a{*/
+/*    margin: 0 !important;*/
+/*    padding: 0 !important;*/
+/*}*/
+.nav > li:last-child a::before{
+    /*width: 0px !important;*/
+    display: none;
+}
+ a .badge {
+    right: 20px;
+    top: -14px ;
+    font-weight: 700; 
+    z-index: 3;
+}

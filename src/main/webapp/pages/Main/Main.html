@@ -1,0 +1,117 @@
+<wm-page name="mainpage" pagetitle="Main">
+    <wm-header content="header" name="header" height="auto"></wm-header>
+    <wm-content name="content">
+        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px" accessroles="Everyone">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1" horizontalalign="left" class="main-description" padding="100px unset unset 50px">
+                        <wm-label name="label2" caption="Trade-in-offer" class="h2" color="#000000" textalign="left"></wm-label>
+                        <wm-label name="label3" caption="Super value deals" class="h1" color="#1f2125" fontweight="bold" textalign="left"></wm-label>
+                        <wm-label name="label4" caption="On all products" class="h1" color="#019b8c" fontweight="bold" textalign="left"></wm-label>
+                        <wm-label name="label5" caption="Save more with coupons &amp; upto 70% off !" class="h3" color="#7c7c7c" textalign="left"></wm-label>
+                        <wm-button class="btn-default" caption="Shop Now" type="button" name="button1" backgroundcolor="#f9e0c6" color="#249e52" fontweight="bold" fontsize="16" on-click="Actions.goToPage_allProduct.invoke()"></wm-button>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2" padding="25px unset unset unset">
+                        <wm-carousel height="480" name="carousel3">
+                            <wm-carousel-content name="carousel_content4">
+                                <wm-picture width="100%" name="picture6" picturesource="resources/images/imagelists/young-smiling-man-buying-internet-holding-credit-card-paying-purchase-with-laptop-standing-blue-background.jpg" height="100%" resizemode="cover"></wm-picture>
+                            </wm-carousel-content>
+                            <wm-carousel-content name="carousel_content5">
+                                <wm-picture width="100%" name="picture7" picturesource="resources/images/imagelists/black-friday-elements-assortment.jpg" resizemode="cover"></wm-picture>
+                            </wm-carousel-content>
+                            <wm-carousel-content name="carousel_content6">
+                                <wm-picture width="100%" name="picture8" picturesource="resources/images/imagelists/attractive-asian-woman-showing-smartphone-app-shopping-bags-buying-online-via-application-standi.jpg" resizemode="cover"></wm-picture>
+                            </wm-carousel-content>
+                        </wm-carousel>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-list listclass="list-group" template="true" template-name="Product Overview" itemsperrow="xs-1 sm-2 md-4 lg-4" class="list-card" statehandler="none" name="laptopmain" dataset="bind:Variables.getLaptop.dataSet" navigation="On-Demand" title="Laptops"
+                direction="vertical" ondemandmessage="Load More" paginationclass="btn-default">
+                <wm-listtemplate layout="media" name="listtemplate2">
+                    <wm-card name="Picture" picturesource="bind:Variables.getLaptop.dataSet[$i].imageUrl" title="" class="card">
+                        <wm-card-content padding="1.5em unset unset unset" name="card_content2">
+                            <wm-label class="h4" caption="bind:Variables.getLaptop.dataSet[$i].pname" margin="unset unset 0px unset" whitespace="nowrap" name="label20" color="#21ADF0"></wm-label>
+                            <wm-label caption="bind:&quot;Rs.&quot;+Variables.getLaptop.dataSet[$i].price" margin="unset unset 0px unset" fontsize="14" name="label21_1"></wm-label>
+                        </wm-card-content>
+                        <wm-card-footer horizontalalign="center" name="card_footer2">
+                            <wm-anchor caption="More Details" class="btn btn-transparent" name="anchor2" on-click="Actions.goToPage_ProductDescrip.invoke()"></wm-anchor>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+            <wm-list listclass="list-group" template="true" template-name="Product Inventory" itemsperrow="xs-1 sm-2 md-4 lg-4" class="list-card" statehandler="none" name="accmain" dataset="bind:Variables.getAcessories.dataSet" navigation="On-Demand"
+                title="Accessories" paginationclass="btn-default">
+                <wm-listtemplate layout="media" name="listtemplate3">
+                    <wm-card name="Picture" picturesource="bind:Variables.getAcessories.dataSet[$i].imageUrl" class="card">
+                        <wm-card-content name="card_content3">
+                            <wm-label name="Name" class="h4" caption="bind:Variables.getAcessories.dataSet[$i].pname" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                            <wm-label caption="bind:&quot;Rs.&quot;+Variables.getAcessories.dataSet[$i].price" margin="unset unset 0px unset" name="label17_1" fontsize="14"></wm-label>
+                        </wm-card-content>
+                        <wm-card-footer horizontalalign="center" name="card_footer3">
+                            <wm-anchor caption="More Details" class="btn btn-transparent" name="anchor5_1" on-click="Actions.goToPage_ProductDescrip.invoke()"></wm-anchor>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+            <wm-list listclass="list-group" template="true" template-name="Product Inventory" itemsperrow="xs-1 sm-2 md-4 lg-4" class="list-card" statehandler="none" dataset="bind:Variables.getCloth.dataSet" navigation="On-Demand" title="Cloths" name="clothmain"
+                paginationclass="btn-default">
+                <wm-listtemplate layout="media" name="listtemplate4">
+                    <wm-card picturesource="bind:Variables.getCloth.dataSet[$i].imageUrl" name="card4" class="card">
+                        <wm-card-content name="card_content4">
+                            <wm-label class="h4" caption="bind:Variables.getCloth.dataSet[$i].pname" margin="unset unset 0px unset" name="label14" color="#21ADF0" whitespace="nowrap"></wm-label>
+                            <wm-label caption="bind:&quot;Rs.&quot;+Variables.getCloth.dataSet[$i].price" margin="unset unset 0px unset" name="label16_1" fontsize="14"></wm-label>
+                        </wm-card-content>
+                        <wm-card-footer horizontalalign="center" name="card_footer4">
+                            <wm-anchor caption="More Details" class="btn btn-transparent" name="anchor9" on-click="Actions.goToPage_ProductDescrip.invoke()"></wm-anchor>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+            <wm-list listclass="list-group" template="true" template-name="Product Inventory" itemsperrow="xs-1 sm-2 md-4 lg-4" class="list-card" statehandler="none" dataset="bind:Variables.getPhone.dataSet" navigation="On-Demand" title="Mobile" paginationclass="btn-default"
+                name="mobilemain">
+                <wm-listtemplate layout="media" name="listtemplate6">
+                    <wm-card picturesource="bind:Variables.getPhone.dataSet[$i].imageUrl" class="card" name="card6" imageheight="200px">
+                        <wm-card-content name="card_content6">
+                            <wm-label class="h4" caption="bind:Variables.getPhone.dataSet[$i].pname" margin="unset unset 0px unset" color="#21ADF0" whitespace="nowrap" name="label24_1"></wm-label>
+                            <wm-label caption="bind:&quot;Rs.&quot;+Variables.getPhone.dataSet[$i].price" margin="unset unset 0px unset" fontsize="14" name="label25_1"></wm-label>
+                        </wm-card-content>
+                        <wm-card-footer horizontalalign="center" name="card_footer6">
+                            <wm-anchor caption="More Details" class="btn btn-transparent" on-click="Actions.goToPage_ProductDescrip.invoke()" name="anchor11_1"></wm-anchor>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+            <wm-layoutgrid name="layoutgrid4">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn5" horizontalalign="center">
+                        <wm-picture resizemode="cover" name="picture4" picturesource="resources/images/imagelists/b17.jpg" width="100%" class="banner-img"></wm-picture>
+                        <wm-container name="container1" class="banner-text" horizontalalign="left" padding="10px">
+                            <wm-label padding="unset 0.5em" name="label17_2" class="h3" caption="Crazy deals" color="#ffffff"></wm-label>
+                            <wm-label padding="unset 0.5em" name="label19" caption="The Best classical dress on sale" class="h4" color="#ffffff"></wm-label>
+                            <wm-label padding="unset 0.5em" name="label18" caption="Buy 1 get 1 Free" class="h2" fontweight="bold" color="#ffffff"></wm-label>
+                            <wm-anchor margin="2em 0.5em unset 0.5em" name="anchor9_1" caption="Learn More" fontweight="bold" color="#ffffff" backgroundcolor="#01a984" padding="10px" class="learn-more"></wm-anchor>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn6" horizontalalign="center">
+                        <wm-picture resizemode="cover" name="picture5" width="100%" picturesource="resources/images/imagelists/front-view-cyber-monday-composition.jpg" height="236px" class="banner-img"></wm-picture>
+                        <wm-container class="banner-text" horizontalalign="left" padding="10px" name="container2">
+                            <wm-label padding="unset 0.5em" caption="Best Laptops under Low budget" class="h4" color="#ffffff" name="label21"></wm-label>
+                            <wm-label padding="unset 0.5em" caption="Get 25%  discount on  credit/debit card" class="h2" fontweight="bold" color="#ffffff" name="label22"></wm-label>
+                            <wm-anchor margin="2em 0.5em unset 0.5em" caption="Learn More" fontweight="bold" color="#ffffff" backgroundcolor="#01a984" padding="10px" name="anchor10_1" class="learn-more"></wm-anchor>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn9" horizontalalign="center">
+                        <wm-picture resizemode="cover" name="picture6_1" width="100%" picturesource="resources/images/imagelists/elegant-smartphone-composition__1_.jpg" height="236px" class="banner-img"></wm-picture>
+                        <wm-container class="banner-text" horizontalalign="left" padding="10px" name="container3">
+                            <wm-label padding="unset 0.5em" caption="Buy new smartphones  with latest technology" class="h4" color="#ffffff" name="label24"></wm-label>
+                            <wm-label padding="unset 0.5em" caption="Latest / Brand New  smartphones  under 50k" class="h2" fontweight="bold" color="#ffffff" name="label25"></wm-label>
+                            <wm-anchor margin="2em 0.5em unset 0.5em" caption="Learn More" fontweight="bold" color="#ffffff" backgroundcolor="#01a984" padding="10px" name="anchor11" class="learn-more"></wm-anchor>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="footer" content="footer"></wm-footer>
+</wm-page>

@@ -1,0 +1,8 @@
+{
+  "id" : "FileService",
+  "type" : "JavaService",
+  "packageNames" : [ "com.e_commerce_web_app.fileservice" ],
+  "serviceClassNames" : [ "com.e_commerce_web_app.fileservice.FileService" ],
+  "title" : "FileService",
+  "mockEnabled" : false
+}

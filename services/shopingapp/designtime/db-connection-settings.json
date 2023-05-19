@@ -1,0 +1,60 @@
+{
+  "username" : "{WM_CLOUD_MYSQL_USER_NAME}",
+  "password" : "{WM_CLOUD_MYSQL_PASSWORD}",
+  "url" : "jdbc:mariadb://{WM_CLOUD_MYSQL_HOST}/shopingapp?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true",
+  "driverClass" : "org.mariadb.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "shopingapp",
+  "packageName" : "com.e_commerce_web_app.shopingapp",
+  "dbType" : "MySQL",
+  "host" : "{WM_CLOUD_MYSQL_HOST}",
+  "dbName" : "shopingapp",
+  "port" : "",
+  "schemaName" : null,
+  "tableFilter" : [ {
+    "table" : "cart",
+    "schema" : null
+  }, {
+    "table" : "orderItem",
+    "schema" : null
+  }, {
+    "table" : "product",
+    "schema" : null
+  }, {
+    "table" : "cateogry",
+    "schema" : null
+  }, {
+    "table" : "user_address",
+    "schema" : null
+  }, {
+    "table" : "userinfo",
+    "schema" : null
+  }, {
+    "table" : "cartitem",
+    "schema" : null
+  }, {
+    "table" : "orderlist",
+    "schema" : null
+  }, {
+    "table" : "contact",
+    "schema" : null
+  } ],
+  "schemaFilter" : [ ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "update",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null,
+    "reImport" : false
+  },
+  "readOnly" : false,
+  "metadataDialect" : ""
+}

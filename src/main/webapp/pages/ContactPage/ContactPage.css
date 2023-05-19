@@ -1,0 +1,6 @@
+.wm-app .form-control{
+    border: 1px solid black;
+}
+.wm-app .form-control:active{
+    border: 1px solid black !important;
+}

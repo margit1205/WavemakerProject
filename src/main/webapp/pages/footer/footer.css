@@ -1,0 +1,9 @@
+.follow-icon{
+    margin: 5px;
+}
+.follow-icon:hover{
+    cursor: pointer;
+}
+.youtube{
+    padding-right: 5px;
+}

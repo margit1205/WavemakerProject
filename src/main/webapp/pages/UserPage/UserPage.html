@@ -1,0 +1,194 @@
+<wm-page name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-panel iconclass="" autoclose="outsideClick" title="" name="panel1">
+                <wm-layoutgrid name="layoutgrid1">
+                    <wm-gridrow name="gridrow1" padding="50px unset unset unset">
+                        <wm-gridcolumn columnwidth="7" name="gridcolumn1">
+                            <wm-layoutgrid name="layoutgrid2">
+                                <wm-gridrow name="gridrow3" class="center-icon">
+                                    <wm-gridcolumn columnwidth="2" name="gridcolumn6" horizontalalign="right" class="myicon">
+                                        <wm-container name="container2" horizontalalign="center" class="camera" width="45px" height="45px">
+                                            <wm-icon name="icon4" iconclass="wi wi-photo-camera fa-2x"></wm-icon>
+                                        </wm-container>
+                                        <wm-icon name="icon1" iconclass="wi wi-account-circle fa-4x" color="#9c9c9c" iconposition="right" class="myicon"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="10" name="gridcolumn7">
+                                        <wm-label padding="unset 0.5em 0em 0.5em" name="label1" class="h2 text-uppercase" caption="bind:Variables.getUserInfo.firstRecord.fullName" margin="0px unset"></wm-label>
+                                        <wm-label padding="unset 0.7em 0em 0.7em" name="label2" class="h4" caption="bind:Variables.getUserInfo.firstRecord.email" margin="0px unset"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="2" name="gridcolumn5"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="3" name="gridcolumn2" horizontalalign="right">
+                            <wm-button caption="Edit" type="button" margin="unset 0.5em" name="button1" width="100px" padding="10px" backgroundcolor="#10bc83" color="#fff" on-click="Widgets.dialog1.open()"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2" padding="60px unset 60px 45px">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn3">
+                            <wm-layoutgrid name="layoutgrid3">
+                                <wm-gridrow name="gridrow4">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                        <wm-label padding="unset 0.5em" name="label3" class="h5" caption="FULL  NAME"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label4" caption="bind:Variables.getUserInfo.firstRecord.fullName" class="text-uppercase h4" margin="0px unset unset unset" fontweight="bold"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow5">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                                        <wm-label padding="unset 0.5em" class="h5" caption="Gender" name="label5"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="bind:Variables.getUserInfo.firstRecord.gender" class="text-uppercase h4" margin="0px unset unset unset" name="label6" fontweight="bold"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow6">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                                        <wm-label padding="unset 0.5em" class="h5" caption="STATE" name="label7"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="bind:Variables.useraddress.firstRecord.state" class="text-uppercase h4" margin="0px unset unset unset" name="label8" fontweight="bold"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow13">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn20">
+                                        <wm-label padding="unset 0.5em" class="h5" caption="TIME ZONE" name="label15"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="(GMT +5:30) India Standard Time ( Asia/Kolkata )" class="text-uppercase h4" margin="0px unset unset unset" fontweight="bold" name="label16"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                            <wm-layoutgrid name="layoutgrid5">
+                                <wm-gridrow name="gridrow10">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn17">
+                                        <wm-label padding="unset 0.5em" class="h5" caption="USER NAME" name="label9"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="bind:Variables.getUserInfo.firstRecord.username" class="text-uppercase h4" margin="0px unset unset unset" name="label10" fontweight="bold"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow11">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn18">
+                                        <wm-label padding="unset 0.5em" class="h5" caption="COUNTRY" name="label11"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="bind:Variables.useraddress.firstRecord.country" class="text-uppercase h4" margin="0px unset unset unset" name="label12" fontweight="bold"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow12">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn19">
+                                        <wm-label padding="unset 0.5em" class="h5" caption="LANGAUGE" name="label13"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="English - United States" class="text-uppercase h4" margin="0px unset unset unset" name="label14" fontweight="bold"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow19">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn30_1">
+                                        <wm-label padding="unset 0.5em" class="h5" caption="MOBILE NUMBER" name="label28"></wm-label>
+                                        <wm-label padding="unset 0.5em" caption="bind:Variables.getUserInfo.firstRecord.phone" class="text-uppercase h4" margin="0px unset unset unset" fontweight="bold" name="label29"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn8" horizontalalign="center">
+                            <wm-picture resizemode="cover" name="picture2" picturesource="bind:Variables.useraddress.firstRecord.userinfo.image" width="250px"></wm-picture>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-panel>
+            <wm-panel iconclass="" autoclose="outsideClick" title="" name="panel2">
+                <wm-layoutgrid name="layoutgrid5_1">
+                    <wm-gridrow name="gridrow11_1" class="myemail-div">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn16" padding="20px unset">
+                            <wm-label padding="unset 0.5em" name="label18" class="h2" caption="My Email Addresses"></wm-label>
+                            <wm-label padding="unset 0.8em" class="h4" name="label19" caption="You can use the following email addresses to sign in to your account and also to reset your password if you ever forget it."></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12_1">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn18_1" padding="20px unset">
+                            <wm-layoutgrid name="layoutgrid7">
+                                <wm-gridrow name="gridrow15" class="center-icon">
+                                    <wm-gridcolumn columnwidth="2" name="gridcolumn25" horizontalalign="center" class="mail-div">
+                                        <wm-icon name="icon2" color="#fff" opacity="1" iconclass="wm-sl-l sl-email-unread fa-2x" class="mail-icon"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="10" name="gridcolumn26">
+                                        <wm-label padding="unset 0.5em" name="label19_1" class="h5" caption="bind:Variables.getUserInfo.firstRecord.email"></wm-label>
+                                        <wm-label padding="unset 0.5em" name="label20" class="h6 text-muted" caption="3 months ago"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn19_1"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn20_1"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow17">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn30" horizontalalign="center">
+                            <wm-container name="container1" horizontalalign="center" padding="20px unset" margin="10px unset" display="flex" class="addmail">
+                                <wm-icon iconclass="wi wi-plus" color="#03a9f4" name="icon3"></wm-icon>
+                                <wm-label padding="unset 0.5em" caption="Add a new email" fontweight="bold" color="#03a9f4" class="add-label" name="label21"></wm-label>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-panel>
+            <wm-panel iconclass="" autoclose="outsideClick" title="" name="panel3">
+                <wm-layoutgrid name="layoutgrid7_1">
+                    <wm-gridrow class="myemail-div" name="gridrow15_1">
+                        <wm-gridcolumn columnwidth="12" padding="20px unset" name="gridcolumn23">
+                            <wm-label padding="unset 0.5em" class="h2" caption="My Mobile Numbers" name="label22"></wm-label>
+                            <wm-label padding="unset 0.8em" class="h4" caption="View and manage all of the mobile numbers associated with your account." name="label23"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow16">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn27" horizontalalign="center" padding="30px unset">
+                            <wm-picture resizemode="cover" name="picture1" picturesource="https://static.zohocdn.com/iam/v2/components/images/Common.6ca34050df423a5edd4216bc1ddf810c.png" width="100px"></wm-picture>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow18">
+                        <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn29" padding="20px unset">
+                            <wm-button class="btn-default" caption="Add Mobile Number" type="button" margin="unset 0.5em" name="button2" backgroundcolor="#10bc83" color="#fff" padding="10px"></wm-button>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-panel>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Personal Details" iconclass="fa fa-edit" name="dialog1">
+        <wm-liveform errormessage="" title="" iconclass="" defaultmode="Edit" dataset="bind:Variables.getUserInfo.dataSet" captionalign="left" captionposition="top" name="UserinfoLiveForm1" formdata="bind:Variables.getUserInfo.firstRecord" on-success="Widgets.dialog1.close();Actions.sucessEdit.invoke()"
+            on-beforeservicecall="UserinfoLiveForm1Beforeservicecall($event, $operation, $data, options)">
+            <wm-layoutgrid columns="2" name="layoutgrid8">
+                <wm-gridrow name="gridrow19_1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn27_1">
+                        <wm-form-field name="fullName" displayname="Full Name" show="true" primary-key="false" generator="assigned" key="fullName" type="string" readonly="false" required="false" widget="text" maxchars="255" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn28">
+                        <wm-form-field name="gender" displayname="Gender" show="true" primary-key="false" generator="assigned" key="gender" type="string" readonly="false" required="false" widget="text" maxchars="255" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow20">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn29_1">
+                        <wm-form-field name="email" displayname="Email" show="true" primary-key="false" generator="assigned" key="email" type="string" readonly="false" required="true" widget="text" maxchars="100" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn30_2">
+                        <wm-form-field name="phone" displayname="Phone" show="true" primary-key="false" generator="assigned" key="phone" type="long" readonly="false" required="false" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow21">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn31">
+                        <wm-form-field name="username" displayname="Username" show="true" primary-key="false" generator="assigned" key="username" type="string" readonly="false" required="true" widget="text" maxchars="100" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn32">
+                        <wm-form-field name="password" displayname="Password" show="true" primary-key="false" generator="assigned" key="password" type="string" widget="password"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow22">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn34">
+                        <wm-form-field name="image" displayname="Image" show="false" primary-key="false" generator="assigned" key="image" type="string" readonly="false" required="false" widget="text" maxchars="255" inputtype="text" placeholder="Enter value"></wm-form-field>
+                        <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload1" on-select="Variables.FileServiceUploadFile.invoke()" show="true"></wm-fileupload>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn33">
+                        <wm-form-field name="role" displayname="Role" show="false" primary-key="false" generator="assigned" key="role" type="string" readonly="false" required="false" widget="text" maxchars="255" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+    </wm-dialog>
+</wm-page>

@@ -1,0 +1,11 @@
+.search-order{
+    margin-bottom: 20px;
+    width: 400px;
+}
+.input-group-addon{
+    border-bottom: none;
+}
+.app-grid .app-datagrid .form-search .form-group{
+    width: 200px !important;
+     margin-bottom: 20px;
+}

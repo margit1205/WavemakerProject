@@ -1,0 +1,14 @@
+<wm-partial name="leftnav" type="leftnav">
+    <wm-nav name="leftnavigation" type="pills" layout="stacked">
+        <wm-nav-item name="list_order" class="anchor-caption">
+            <wm-anchor caption="HOME" name="EventsPageLink" iconclass="wm-sl-r sl-home" class="leftnav-link" on-click="Actions.goToPage_AdminPage.invoke()" accessroles="admin"></wm-anchor>
+            <wm-anchor caption="My Account" iconclass="wm-sl-l sl-user" class="leftnav-link" on-click="Actions.goToPage_UserPage.invoke()" name="anchor4"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order" class="anchor-caption">
+            <wm-anchor caption="My Orders" name="UserProfileLink" iconclass="wm-sl-l sl-shopping-cart" class="leftnav-link" margin="unset unset unset 2px" on-click="Actions.goToPage_myorders.invoke()" accessroles="user"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order" class="anchor-caption">
+            <wm-anchor caption="Logout" name="LogoutDialog" iconclass="wm-sl-r sl-logout" on-click="Actions.logoutAction.invoke()" class="leftnav-link"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

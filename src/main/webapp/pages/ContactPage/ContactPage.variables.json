@@ -1,0 +1,25 @@
+{
+  "ShopingappCreateContact" : {
+    "_id" : "wm-ShopingappCreateContact-wm.ServiceVariable-1684393690877",
+    "name" : "ShopingappCreateContact",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.e_commerce_web_app.shopingapp.Contact",
+    "service" : "shopingapp",
+    "operation" : "createContact",
+    "operationId" : "ContactController_createContact",
+    "operationType" : "post",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "Contact"
+  }
+}

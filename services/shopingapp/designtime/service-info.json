@@ -1,0 +1,7 @@
+{
+  "id" : "shopingapp",
+  "type" : "DataService",
+  "packageNames" : [ "com.e_commerce_web_app.shopingapp" ],
+  "title" : "shopingapp",
+  "mockEnabled" : false
+}

@@ -1,0 +1,135 @@
+[ {
+  "name" : "AboutPage",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Accessories",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "AdminPage",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Cloths",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "ContactPage",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Laptop",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Mobile",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "PaymentPage",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "productid",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "ProductDescrip",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "laptopid",
+    "type" : "integer"
+  }, {
+    "name" : "mobileid",
+    "type" : "integer"
+  }, {
+    "name" : "accId",
+    "type" : "integer"
+  }, {
+    "name" : "clothId",
+    "type" : "integer"
+  }, {
+    "name" : "allproductId",
+    "type" : "integer"
+  }, {
+    "name" : "mobilepageid",
+    "type" : "integer"
+  }, {
+    "name" : "accpageid",
+    "type" : "integer"
+  }, {
+    "name" : "laptoppageid",
+    "type" : "integer"
+  }, {
+    "name" : "clothpageid",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "UserPage",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "allProduct",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "blogPage",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "myCart",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "myorders",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "orderListAdmin",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "proudctListAdmin",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "shopPage",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+}, {
+  "name" : "userListAdmin",
+  "type" : "PARTIAL",
+  "params" : [ ]
+} ]

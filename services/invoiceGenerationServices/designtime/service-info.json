@@ -1,0 +1,8 @@
+{
+  "id" : "invoiceGenerationServices",
+  "type" : "JavaService",
+  "packageNames" : [ "com.e_commerce_web_app.invoicegenerationservices" ],
+  "serviceClassNames" : [ "com.e_commerce_web_app.invoicegenerationservices.InvoiceGenerationServices" ],
+  "title" : "invoiceGenerationServices",
+  "mockEnabled" : false
+}

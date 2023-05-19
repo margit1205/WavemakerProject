@@ -1,0 +1,116 @@
+[ {
+  "urlPattern" : "/pages/Accessories/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/AdminPage/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/allProduct/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Cloths/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/footer/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/header/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Laptop/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/leftnav/**",
+  "permission" : "Authenticated",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Login/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Main/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Mobile/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/myCart/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/myorders/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/orderListAdmin/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/PaymentPage/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/proudctListAdmin/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/rightnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/topnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/userListAdmin/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/UserPage/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/**",
+  "permission" : "Authenticated",
+  "roles" : null,
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/shopingapp/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/file/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+} ]

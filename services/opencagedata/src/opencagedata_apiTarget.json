@@ -1,0 +1,675 @@
+{
+  "basePath" : "${rest.opencagedata.basepath}",
+  "paths" : {
+    "/v1/json" : {
+      "x-WM-BASE_PATH" : "/v1/json",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "opencagedata_RestServiceVirtualController-invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "query",
+          "format" : "string",
+          "description" : "query",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        }, {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "key",
+          "format" : "string",
+          "description" : "key",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "RestServiceVirtualController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.opencagedata.scheme}://${rest.opencagedata.host}${rest.opencagedata.basepath}/v1/json"
+    }
+  },
+  "host" : "${rest.opencagedata.host}",
+  "schemes" : [ "${rest.opencagedata.scheme}" ],
+  "definitions" : {
+    "Response.Mercator" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.Mercator",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "x", "y" ],
+      "properties" : {
+        "x" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "y" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "Response.stay_informed" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.stay_informed",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "blog", "mastodon", "twitter" ],
+      "properties" : {
+        "twitter" : {
+          "type" : "string"
+        },
+        "mastodon" : {
+          "type" : "string"
+        },
+        "blog" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.licensesEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.licensesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "name", "url" ],
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "url" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.regions" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.regions",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "ASIA", "IN", "MY", "PK", "SG", "SOUTHEAST_ASIA", "SOUTHERN_ASIA", "WORLD" ],
+      "properties" : {
+        "ASIA" : {
+          "type" : "string"
+        },
+        "SG" : {
+          "type" : "string"
+        },
+        "IN" : {
+          "type" : "string"
+        },
+        "SOUTHEAST_ASIA" : {
+          "type" : "string"
+        },
+        "PK" : {
+          "type" : "string"
+        },
+        "MY" : {
+          "type" : "string"
+        },
+        "SOUTHERN_ASIA" : {
+          "type" : "string"
+        },
+        "WORLD" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.status" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.status",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "code", "message" ],
+      "properties" : {
+        "code" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.annotations" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.annotations",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "DMS", "MGRS", "Maidenhead", "Mercator", "OSM", "UN_M49", "callingcode", "currency", "flag", "geohash", "qibla", "roadinfo", "sun", "timezone", "what3words", "wikidata" ],
+      "properties" : {
+        "flag" : {
+          "type" : "string"
+        },
+        "Mercator" : {
+          "$ref" : "#/definitions/Response.Mercator"
+        },
+        "timezone" : {
+          "$ref" : "#/definitions/Response.timezone"
+        },
+        "what3words" : {
+          "$ref" : "#/definitions/Response.what3words"
+        },
+        "OSM" : {
+          "$ref" : "#/definitions/Response.OSM"
+        },
+        "DMS" : {
+          "$ref" : "#/definitions/Response.DMS"
+        },
+        "sun" : {
+          "$ref" : "#/definitions/Response.sun"
+        },
+        "UN_M49" : {
+          "$ref" : "#/definitions/Response.UN_M49"
+        },
+        "Maidenhead" : {
+          "type" : "string"
+        },
+        "callingcode" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "qibla" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "geohash" : {
+          "type" : "string"
+        },
+        "currency" : {
+          "$ref" : "#/definitions/Response.currency"
+        },
+        "roadinfo" : {
+          "$ref" : "#/definitions/Response.roadinfo"
+        },
+        "wikidata" : {
+          "type" : "string"
+        },
+        "MGRS" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.components" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.components",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "ISO_3166-1_alpha-2", "ISO_3166-1_alpha-3", "ISO_3166-2", "_category", "_type", "building", "city", "city_district", "continent", "country", "country_code", "county", "house_number", "neighbourhood", "postcode", "quarter", "railway", "residential", "restaurant", "road", "shop", "state", "state_code", "state_district", "subdistrict", "suburb", "village", "water" ],
+      "properties" : {
+        "continent" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        },
+        "shop" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "county" : {
+          "type" : "string"
+        },
+        "house_number" : {
+          "type" : "string"
+        },
+        "building" : {
+          "type" : "string"
+        },
+        "road" : {
+          "type" : "string"
+        },
+        "neighbourhood" : {
+          "type" : "string"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "railway" : {
+          "type" : "string"
+        },
+        "village" : {
+          "type" : "string"
+        },
+        "city_district" : {
+          "type" : "string"
+        },
+        "restaurant" : {
+          "type" : "string"
+        },
+        "_type" : {
+          "type" : "string"
+        },
+        "postcode" : {
+          "type" : "string"
+        },
+        "ISO_3166-1_alpha-2" : {
+          "type" : "string"
+        },
+        "ISO_3166-1_alpha-3" : {
+          "type" : "string"
+        },
+        "water" : {
+          "type" : "string"
+        },
+        "country_code" : {
+          "type" : "string"
+        },
+        "residential" : {
+          "type" : "string"
+        },
+        "state_district" : {
+          "type" : "string"
+        },
+        "subdistrict" : {
+          "type" : "string"
+        },
+        "suburb" : {
+          "type" : "string"
+        },
+        "_category" : {
+          "type" : "string"
+        },
+        "ISO_3166-2" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "state_code" : {
+          "type" : "string"
+        },
+        "quarter" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.rate" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.rate",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "limit", "remaining", "reset" ],
+      "properties" : {
+        "limit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "reset" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "remaining" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "Response.UN_M49" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.UN_M49",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "regions", "statistical_groupings" ],
+      "properties" : {
+        "regions" : {
+          "$ref" : "#/definitions/Response.regions"
+        },
+        "statistical_groupings" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "Response.timezone" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.timezone",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "name", "now_in_dst", "offset_sec", "offset_string", "short_name" ],
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "now_in_dst" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "short_name" : {
+          "type" : "string"
+        },
+        "offset_sec" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "offset_string" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.northeast" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.northeast",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "Response.set" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.set",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "apparent", "astronomical", "civil", "nautical" ],
+      "properties" : {
+        "astronomical" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "civil" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "apparent" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "nautical" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "Response.southwest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.southwest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "Response.OSM" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.OSM",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "edit_url", "note_url", "url" ],
+      "properties" : {
+        "note_url" : {
+          "type" : "string"
+        },
+        "edit_url" : {
+          "type" : "string"
+        },
+        "url" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.what3words" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.what3words",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "words" ],
+      "properties" : {
+        "words" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "documentation", "licenses", "rate", "results", "status", "stay_informed", "thanks", "timestamp", "total_results" ],
+      "properties" : {
+        "thanks" : {
+          "type" : "string"
+        },
+        "licenses" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.licensesEntryItem"
+          }
+        },
+        "rate" : {
+          "$ref" : "#/definitions/Response.rate"
+        },
+        "documentation" : {
+          "type" : "string"
+        },
+        "stay_informed" : {
+          "$ref" : "#/definitions/Response.stay_informed"
+        },
+        "results" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.resultsEntryItem"
+          }
+        },
+        "status" : {
+          "$ref" : "#/definitions/Response.status"
+        },
+        "timestamp" : {
+          "$ref" : "#/definitions/Response.timestamp"
+        },
+        "total_results" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "Response.DMS" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.DMS",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "type" : "string"
+        },
+        "lat" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.geometry" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.geometry",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "Response.rise" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.rise",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "apparent", "astronomical", "civil", "nautical" ],
+      "properties" : {
+        "astronomical" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "civil" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "apparent" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "nautical" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "Response.resultsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.resultsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "annotations", "bounds", "components", "confidence", "formatted", "geometry" ],
+      "properties" : {
+        "components" : {
+          "$ref" : "#/definitions/Response.components"
+        },
+        "formatted" : {
+          "type" : "string"
+        },
+        "confidence" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "bounds" : {
+          "$ref" : "#/definitions/Response.bounds"
+        },
+        "annotations" : {
+          "$ref" : "#/definitions/Response.annotations"
+        },
+        "geometry" : {
+          "$ref" : "#/definitions/Response.geometry"
+        }
+      }
+    },
+    "Response.bounds" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.bounds",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "northeast", "southwest" ],
+      "properties" : {
+        "southwest" : {
+          "$ref" : "#/definitions/Response.southwest"
+        },
+        "northeast" : {
+          "$ref" : "#/definitions/Response.northeast"
+        }
+      }
+    },
+    "Response.timestamp" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.timestamp",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "created_http", "created_unix" ],
+      "properties" : {
+        "created_unix" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "created_http" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.roadinfo" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.roadinfo",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "drive_on", "road", "speed_in" ],
+      "properties" : {
+        "drive_on" : {
+          "type" : "string"
+        },
+        "speed_in" : {
+          "type" : "string"
+        },
+        "road" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Response.sun" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.sun",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "rise", "set" ],
+      "properties" : {
+        "set" : {
+          "$ref" : "#/definitions/Response.set"
+        },
+        "rise" : {
+          "$ref" : "#/definitions/Response.rise"
+        }
+      }
+    },
+    "Response.currency" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "opencagedata.Response.currency",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "alternate_symbols", "decimal_mark", "disambiguate_symbol", "html_entity", "iso_code", "iso_numeric", "name", "smallest_denomination", "subunit", "subunit_to_unit", "symbol", "symbol_first", "thousands_separator" ],
+      "properties" : {
+        "thousands_separator" : {
+          "type" : "string"
+        },
+        "symbol" : {
+          "type" : "string"
+        },
+        "alternate_symbols" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "symbol_first" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "subunit_to_unit" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "html_entity" : {
+          "type" : "string"
+        },
+        "disambiguate_symbol" : {
+          "type" : "string"
+        },
+        "subunit" : {
+          "type" : "string"
+        },
+        "smallest_denomination" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "decimal_mark" : {
+          "type" : "string"
+        },
+        "iso_numeric" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "iso_code" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "288eeb22-92bc-45c9-8290-5d226b01fdbf",
+    "x-WM-SERVICE_ID" : "opencagedata2",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ]
+}

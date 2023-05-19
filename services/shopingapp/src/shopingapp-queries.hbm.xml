@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="CartIdFromUserid">
+        <![CDATA[
+        select id from cart where user_id=:loginuserid
+        ]]>
+    <query-param name="loginuserid" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="CartIdFromUserid__count">
+        <![CDATA[
+        select count(*) from (select id from cart where user_id=:loginuserid) wmTempTable
+        ]]>
+    <query-param name="loginuserid" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="updateOrder">
+        <![CDATA[
+        update orderlist set status=:order_status where id=:orderid and user_id=:userid
+        ]]>
+    <query-param name="order_status" type="java.lang.String"/>
+    <query-param name="orderid" type="java.lang.String"/>
+    <query-param name="userid" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="CartItemCount">
+        <![CDATA[
+        select count(PRODUCT_ID) from cartitem CARTITEM, cart MYCART where CARTITEM.cart_id=MYCART.id and MYCART.USER_ID=:userid
+        ]]>
+    <query-param name="userid" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="CartItemCount__count">
+        <![CDATA[
+        select count(*) from (select count(PRODUCT_ID) from cartitem CARTITEM, cart MYCART where CARTITEM.cart_id=MYCART.id and MYCART.USER_ID=:userid) wmTempTable
+        ]]>
+    <query-param name="userid" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="AddToCart">
+        <![CDATA[
+        insert into cartitem values(:id,:cartid,:productId,:quantity)
+        ]]>
+    <query-param name="id" type="java.lang.String"/>
+    <query-param name="cartid" type="java.lang.String"/>
+    <query-param name="productId" type="java.lang.String"/>
+    <query-param name="quantity" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="RemoveProduct">
+        <![CDATA[
+        DELETE FROM cartitem WHERE id=:itemid
+        ]]>
+    <query-param name="itemid" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="getProductById">
+        <![CDATA[
+        select * from product where id=:proudctid
+        ]]>
+    <query-param name="proudctid" type="java.lang.Integer"/>
+    </sql-query>
+
+    <sql-query name="getProductById__count">
+        <![CDATA[
+        select count(*) from (select * from product where id=:proudctid) wmTempTable
+        ]]>
+    <query-param name="proudctid" type="java.lang.Integer"/>
+    </sql-query>
+</hibernate-mapping>

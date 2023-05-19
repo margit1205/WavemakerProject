@@ -1,0 +1,107 @@
+<wm-partial name="header" type="header">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="2" name="gridcolumn4" horizontalalign="center">
+                <wm-picture picturesource="resources/images/imagelists/black_logo.png" name="AppLogo" margin="10px unset unset 1px" resizemode="contain" shape="rounded" class="logo" pictureaspect="None" width="150px" show="true" cursor="pointer" encodeurl="true"
+                    on-click="Actions.goToPage_Main.invoke()"></wm-picture>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="8" name="gridcolumn5_2">
+                <wm-nav type="tabs" autoclose="outsideClick" name="nav1" margin="unset unset unset 1em" padding="unset unset unset 10em" accessroles="user">
+                    <wm-nav-item name="nav_item1">
+                        <wm-anchor caption="Home" name="anchor1" on-click="Actions.goToPage_Main.invoke()"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item2">
+                        <wm-menu caption="Cateogry" autoclose="outsideClick" name="menu2" iconclass="" type="anchor" dataset="bind:Variables.stvCategoryNav.dataSet" horizontalalign="center" color="#000000" linktarget="_blank" itemlabel="label" itemlink="Link"></wm-menu>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item3">
+                        <wm-anchor caption="Shop" name="anchor3" on-click="Actions.goToPage_shopPage.invoke()"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item4">
+                        <wm-anchor name="anchor4" iconclass="" caption="Blog" on-click="Actions.goToPage_blogPage.invoke()"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item5">
+                        <wm-anchor name="anchor5" iconclass="" caption="About" on-click="Actions.goToPage_AboutPage.invoke()"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item6">
+                        <wm-anchor name="anchor6" iconclass="" caption="Contact" on-click="Actions.goToPage_ContactPage.invoke()"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item9">
+                        <wm-anchor name="cart" iconclass="wm-sl-l sl-shopping-cart fa-2x" caption="" padding="0px unset" margin="1.5em 0em 0em 0em" class="cart" on-click="Actions.goToPage_myCart.invoke()" badgevalue="bind:Variables.CountCartItem.firstRecord.count_productId_"></wm-anchor>
+                    </wm-nav-item>
+                </wm-nav>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="2" name="gridcolumn3" horizontalalign="right" padding="10px 20px 10px unset">
+                <wm-button class="btn-default" caption="Register" type="button" margin="1em 1.5em unset 0.5em" iconclass="" iconposition="left" color="#000000" name="button2" on-click="Widgets.dialog1.open()" accessroles="Anonymous" show="false"></wm-button>
+                <wm-button class="btn-default" caption="Logout" type="button" margin="1em 1.5em unset 0.5em" iconclass="" iconposition="left" color="#000000" on-click="Actions.logoutAction.invoke()" accessroles="Authenticated" name="button4"
+                    show="false"></wm-button>
+                <wm-button class="btn-default" caption="Login" type="button" margin="1em 1.5em unset 0.5em" name="button1" iconclass="" iconposition="left" color="#000000" on-click="Actions.loginAction.invoke()" accessroles="Anonymous" show="false"></wm-button>
+                <wm-picture resizemode="cover" name="picture2" width="40px" shape="circle" picturesource="bind:Variables.getUserInfo.firstRecord.image" cursor="pointer" on-click="Actions.goToPage_UserPage.invoke()"></wm-picture>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="" iconclass="" name="dialog1" width="700px">
+        <wm-layoutgrid name="layoutgrid2">
+            <wm-gridrow name="gridrow2_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn4_1">
+                    <wm-liveform errormessage="" title="Sign Up" iconclass="wm-sl-l sl-user-add" defaultmode="Edit" dataset="bind:Variables.createUser.dataSet" captionalign="left" captionposition="top" name="userSignup" on-success="Widgets.dialog1.close()"
+                        insertmessage="You are successfulluy registered">
+                        <wm-layoutgrid columns="1" name="layoutgrid3">
+                            <wm-gridrow name="gridrow4">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                                    <wm-form-field name="username" displayname="Username" show="true" primary-key="false" generator="assigned" key="username" type="string" readonly="false" required="true" widget="text" maxchars="100" placeholder="Enter  username"
+                                        inputtype="text" textalign="left"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow5">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                    <wm-form-field name="email" displayname="Email" show="true" primary-key="false" generator="assigned" key="email" type="string" readonly="false" required="true" widget="text" maxchars="100" placeholder="Enter email" inputtype="text"
+                                        textalign="left"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow6">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                                    <wm-form-field name="password" displayname="Password" show="true" primary-key="false" generator="assigned" key="password" type="string" readonly="false" required="true" widget="text" maxchars="100" placeholder="Enter password"
+                                        inputtype="password" textalign="left"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow7">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                                    <wm-form-field name="phone" displayname="Phone" show="true" primary-key="false" generator="assigned" key="phone" type="long" readonly="false" required="false" step="0" widget="number" placeholder="Enter phone no." inputtype="number"
+                                        textalign="left"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow8">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn12">
+                                    <wm-form-field name="role" displayname="Role" show="false" primary-key="false" generator="assigned" key="role" type="string" readonly="false" required="false" widget="text" maxchars="255" defaultvalue="User" inputtype="text"
+                                        placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                        <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                    </wm-liveform>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-logindialog modal="false" caption="Login" iconclass="wi wi-sign-in" name="logindialog3" title="Login">
+        <wm-form errormessage="" captionposition="top" name="form4" on-success="Actions.notificationAction1.invoke()" on-error="Actions.notificationAction2.invoke()">
+            <wm-composite name="composite8">
+                <wm-label caption="Username" class="col-md-3 control-label" name="label7"></wm-label>
+                <wm-container class="col-md-9" name="container7">
+                    <wm-text placeholder="Enter username" class="app-login-dialog-username" name="j_username" updateon="default"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-composite name="composite9">
+                <wm-label caption="Password" class="col-md-3 control-label" name="label8"></wm-label>
+                <wm-container class="col-md-9" name="container8">
+                    <wm-text type="password" placeholder="Enter password" class="app-login-dialog-password" name="j_password" updateon="default"></wm-text>
+                </wm-container>
+            </wm-composite>
+        </wm-form>
+        <wm-dialogactions name="dialogactions3">
+            <wm-button class="btn-primary" caption="Sign in" data-role="loginbutton" name="button6"></wm-button>
+        </wm-dialogactions>
+    </wm-logindialog>
+</wm-partial>

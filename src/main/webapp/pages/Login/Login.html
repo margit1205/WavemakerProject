@@ -1,0 +1,116 @@
+<wm-page layouttype="one-column" columns="1" name="page1" pagetitle="Login">
+    <wm-content name="content1" height="100%">
+        <wm-page-content columnwidth="12" name="column1" padding="0px" class="login">
+            <wm-container class="bg-primary" width="100%" height="100%" backgroundimage="resources/images/imagelists/login-bg.png" backgroundrepeat="no-repeat" backgroundposition="0 0" backgroundsize="100% 100%" backgroundattachment="fixed" name="loginPageContainer">
+                <wm-layoutgrid name="loginGrid" height="100%">
+                    <wm-gridrow name="gridrow6_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn10_1" horizontalalign="center" class="col-xs-12" padding="30px unset">
+                            <wm-picture name="picture1" picturesource="resources/images/imagelists/white_logo.png" resizemode="cover" width="200px"></wm-picture>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="loginGridRow">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn11"></wm-gridcolumn>
+                        <wm-gridcolumn name="loginContentColumn" columnwidth="4" class="col-xs-10  col-md-4">
+                            <wm-container name="container1" class="panel" backgroundcolor="#ffffff" color="#bdbdbd">
+                                <wm-label name="label1" caption="Login" horizontalalign="center" class="p" backgroundcolor="#f7f7f7" margin="0px unset" fontsize="20" padding="1em unset" color="#1e1e1e"></wm-label>
+                                <wm-login name="loginForm" title="" autocomplete="nofill" on-success="Variables.createCart.createRecord()">
+                                    <wm-form name="form1" margin="10px unset unset unset">
+                                        <wm-layoutgrid name="layoutgrid2">
+                                            <wm-gridrow name="gridrow2">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn4" padding="unset unset 1em unset">
+                                                    <wm-container class="input-group" name="container3">
+                                                        <wm-container class="input-group-addon" name="container4">
+                                                            <wm-icon name="icon1" iconclass="wi wi-user"></wm-icon>
+                                                        </wm-container>
+                                                        <wm-text placeholder="Username" name="j_username" class="app-login-username" width="100%" autocomplete="false" autocorrect="off" autocapitalize="off" updateon="default" required="true"></wm-text>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow3">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn7" padding="unset unset 1em unset">
+                                                    <wm-container class="input-group" name="container3">
+                                                        <wm-container class="input-group-addon" name="container6">
+                                                            <wm-icon name="icon1" iconclass="wi wi-key"></wm-icon>
+                                                        </wm-container>
+                                                        <wm-text type="password" name="j_password" placeholder="Password" class="app-login-passworØd" width="100%" autocomplete="true" autocorrect="off" autocapitalize="off" updateon="default" required="true"></wm-text>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow6">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn14" class="col-xs-12">
+                                                    <wm-checkbox caption="Remember me" name="j_rememberme"></wm-checkbox>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow4">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                                                    <wm-button type="submit" caption="Login" width="100%" class="app-login-button btn-primary" name="loginButton" fontsize="1.2" fontunit="em"></wm-button>
+                                                    <wm-layoutgrid name="layoutgrid3">
+                                                        <wm-gridrow name="gridrow8_1">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn10_2" horizontalalign="left" class="register">
+                                                                <wm-label name="label2" caption="Don't have account?" color="#a8a8a8" margin="10px unset unset unset"></wm-label>
+                                                                <wm-container name="container7">
+                                                                    <wm-anchor margin="10px unset unset unset" name="anchor1" caption="Register" textdecoration="underline" on-click="Widgets.dialog1.open()"></wm-anchor>
+                                                                </wm-container>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-form>
+                                </wm-login>
+                            </wm-container>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="2" name="gridcolumn9" class="col-xs-1  col-md-4"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="2" name="gridcolumn8" class="col-xs-1 col-md-4"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn12"></wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+        </wm-page-content>
+    </wm-content>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="" iconclass="" name="dialog1">
+        <wm-form errormessage="" captionposition="top" title="Register" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.createUser.dataSet" captionalign="left" name="createUserinfoForm1" iconclass="fa fa-edit" on-success="Widgets.dialog1.close();Actions.registerAction.invoke()"
+            on-beforesubmit="createUserinfoForm1Beforesubmit($event, widget, $data)">
+            <wm-layoutgrid columns="2" name="layoutgrid5">
+                <wm-gridrow name="gridrow17_1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn20_1">
+                        <wm-form-field name="Userinfo_username" readonly="false" displayname="Username" key="Userinfo.username" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn21_1">
+                        <wm-form-field name="Userinfo_password" readonly="false" displayname="Password" key="Userinfo.password" type="string" show="true" widget="text" inputtype="password" placeholder="Enter value" required="true"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow18_1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn22">
+                        <wm-form-field name="Userinfo_fullName" key="Userinfo.fullName" type="string" displayname="Full Name" widget="text" show="true" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn23">
+                        <wm-form-field name="Userinfo_gender" key="Userinfo.gender" type="string" displayname="Gender" widget="select" show="true" dataset="Male ,Female" placeholder="Select value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow19_1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn24">
+                        <wm-form-field name="Userinfo_email" readonly="false" displayname="Email" key="Userinfo.email" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn25">
+                        <wm-form-field name="Userinfo_phone" readonly="false" displayname="Phone" key="Userinfo.phone" type="long" show="true" widget="number" textalign="left" inputtype="number" placeholder="Enter value" required="true"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow20_1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn26">
+                        <wm-form-field name="Userinfo_role" readonly="false" displayname="Role" key="Userinfo.role" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="user"></wm-form-field>
+                        <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload1" on-select="Variables.FileServiceUploadFile.invoke()"></wm-fileupload>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn27">
+                        <wm-form-field name="Userinfo_image" key="Userinfo.image" type="string" displayname="Image" widget="text" show="false" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+</wm-page>
